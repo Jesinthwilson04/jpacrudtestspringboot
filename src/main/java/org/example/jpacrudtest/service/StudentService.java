@@ -27,5 +27,15 @@ public class StudentService {
         studentRepo.save(student);
 
     }
+
+    public void delstd(int id) {
+        if(studentRepo.findById(id).isPresent()) {
+            studentRepo.deleteById(id);
+        }
+        else{
+            throw new RuntimeException("student not found");
+        }
+
+    }
 }
 

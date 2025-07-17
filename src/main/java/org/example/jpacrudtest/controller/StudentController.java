@@ -31,5 +31,16 @@ public class StudentController {
         return "student updated successfully";
 
     }
+    @DeleteMapping("student/{id}")
+    public String deleteStudent(@PathVariable int id) {
+        try {
+            studentService.delstd(id);
+            return "student deleted successfully";
+        }
+        catch (Exception e) {
+            return "student not found";
+        }
     }
+    }
+
 
