@@ -45,5 +45,8 @@ public class StudentService {
     public Student getStdName(String name) {
         return studentRepo.findByName(name);
     }
+    public List<Student> filterStdByGenAndDept(String gender, String dept) {
+        return studentRepo.filterByStudGenderAndDept(gender,dept);
+    }
 }
 

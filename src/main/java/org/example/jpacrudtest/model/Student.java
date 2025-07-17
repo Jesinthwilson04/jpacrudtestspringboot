@@ -10,6 +10,7 @@ public class Student {
     @Id
     private int id;
     private String name;
+    private String gender;
     private String fatherName;
     private String dept;
 }
