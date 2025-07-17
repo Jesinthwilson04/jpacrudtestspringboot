@@ -22,5 +22,10 @@ public class StudentService {
     public Student getStdId(int id) {
         return studentRepo.findById(id).orElse(new Student());
         }
+
+    public void updateStd(Student student) {
+        studentRepo.save(student);
+
     }
+}
 

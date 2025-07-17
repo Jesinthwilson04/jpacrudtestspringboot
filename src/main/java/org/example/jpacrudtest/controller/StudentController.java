@@ -24,4 +24,12 @@ public class StudentController {
         studentService.addStd(student);
         return "student added successfully";
     }
-}
+    @PutMapping("/student")
+    public String updateStudent(@RequestBody Student student)
+    {
+        studentService.updateStd(student);
+        return "student updated successfully";
+
+    }
+    }
+
