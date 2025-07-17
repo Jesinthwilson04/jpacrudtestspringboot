@@ -41,5 +41,9 @@ public class StudentService {
     public List<Student> getStdDpt(String dept) {
         return studentRepo.findByDept(dept);
     }
+
+    public Student getStdName(String name) {
+        return studentRepo.findByName(name);
+    }
 }
 

@@ -19,10 +19,14 @@ public class StudentController {
     public Student getStudentId(@PathVariable int id) {
         return studentService.getStdId(id);
     }
-    @GetMapping("/student/dept/{deptName}")
+    @GetMapping("/student/department/{deptName}")
     public List<Student> getStudentDept(@PathVariable("deptName") String dept)
     {
         return studentService.getStdDpt(dept);
+    }
+    @GetMapping("/student/name/{name}")
+    public Student getStudentName(@PathVariable("name") String name) {
+        return studentService.getStdName(name);
     }
     @PostMapping("/student")
     public String addStudent(@RequestBody Student student) {
