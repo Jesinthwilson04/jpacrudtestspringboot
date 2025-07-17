@@ -37,5 +37,9 @@ public class StudentService {
         }
 
     }
+
+    public List<Student> getStdDpt(String dept) {
+        return studentRepo.findByDept(dept);
+    }
 }
 
